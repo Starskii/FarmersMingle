@@ -1,6 +1,6 @@
 <script>
-import WelcomeItem from "/WelcomeItem.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
+import WelcomeItem from "../components/WelcomeItem.vue";
+import DocumentationIcon from "../components/icons/IconDocumentation.vue";
 </script>
 
 <template>
