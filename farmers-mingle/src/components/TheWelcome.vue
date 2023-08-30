@@ -13,6 +13,7 @@ import SupportIcon from "./icons/IconSupport.vue";
       <DocumentationIcon />
     </template>
     <template #heading>What is Farmer's Mingle all About?</template>
-      Farmers Mingle is a Clan on Clash of Clans fart
+      Farmers Mingle is a Clan on Clash of Clans
+      Join our discord by clicking <a href="https://discord.gg/dBYRUvfuMP">here!</a>
   </WelcomeItem>
 </template>
