@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h1>Join our Discord!</h1>
+    <br>
     <p>Join our discord by clicking <a href="https://discord.gg/dBYRUvfuMP">here!</a></p>
   </div>
 </template>
