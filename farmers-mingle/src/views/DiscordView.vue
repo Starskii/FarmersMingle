@@ -11,7 +11,7 @@ import DocumentationIcon from "../components/icons/IconDocumentation.vue";
     <template #heading>Join our Discord!</template>
     Join our discord by clicking <a href="https://discord.gg/dBYRUvfuMP">here!</a>
   </WelcomeItem>
-</template>
+</template> 
 
 
 
