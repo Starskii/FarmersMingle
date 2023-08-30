@@ -13,8 +13,6 @@ import DocumentationIcon from "../components/icons/IconDocumentation.vue";
   </WelcomeItem>
 </template> 
 
-
-
 <style>
 @media (min-width: 1024px) {
   .about {
