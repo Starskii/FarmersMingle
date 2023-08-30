@@ -1,4 +1,4 @@
-<script>
+<script setup lang="ts">
 import WelcomeItem from "../components/WelcomeItem.vue";
 import DocumentationIcon from "../components/icons/IconDocumentation.vue";
 </script>
