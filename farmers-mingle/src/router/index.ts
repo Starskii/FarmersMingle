@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: "/discord",
       name: "discord",
-      component: () => import("../views/DiscordView")
+      component: () => import("../views/DiscordView.vue")
     }
   ],
 });
