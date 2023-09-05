@@ -4,13 +4,15 @@ import DocumentationIcon from "../components/icons/IconDocumentation.vue";
 </script>
 
 <template>
-  <WelcomeItem>
+  <main>
+    <WelcomeItem>
     <template #icon>
     <DocumentationIcon />
-    </template>
     <template #heading>Join our Discord!</template>
     Join our discord by clicking <a href="https://discord.gg/dBYRUvfuMP">here!</a>
+  </template>
   </WelcomeItem>
+  </main>
 </template> 
 
 <style>
