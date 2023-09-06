@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
-import { inject } from 'vercel/analytics';
+import { inject } from '@vercel/analytics';
  
 inject();
 </script>
@@ -28,7 +28,6 @@ inject();
   </header>
 
   <RouterView />
-  <Analytics></Analytics>
 </template>
 
 <style scoped>
