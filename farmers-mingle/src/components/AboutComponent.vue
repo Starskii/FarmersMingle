@@ -16,7 +16,6 @@ const CONFIG = {
   }
 };
 
-const count = ref(0);
 const members = ref(null);
 
 // curl -H 'Authorization: ' 
@@ -28,12 +27,6 @@ onMounted(async () => {
     });
 
 
-
-function increment() {
-  count.value++;
-}
-
-
 </script>
 
 <template>
@@ -42,8 +35,6 @@ function increment() {
       <DocumentationIcon />
     </template>
     <template #heading>About our Clan</template>
-      <p>Count: {{ count }}</p>
-    <button @click="increment">Increment</button>
   </WelcomeItem>
 </template>
 
