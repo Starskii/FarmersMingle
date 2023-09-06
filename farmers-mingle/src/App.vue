@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
-import { Analytics } from '@vercel/analytics/react';
+import { inject } from '@vercel/analytics';
+ 
+inject();
 </script>
 
 <template>
