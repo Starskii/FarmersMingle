@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import WelcomeItem from "../components/WelcomeItem.vue";
-import DocumentationIcon from "../components/icons/IconDocumentation.vue";
+import DiscordComponent from "@/components/DiscordComponent.vue";
 </script>
 
 <template>
   <main>
-    <WelcomeItem>
-    <template #icon>
-    <DocumentationIcon />
-    <template #heading>Join our Discord!</template>
-    Join our discord by clicking <a href="https://discord.gg/dBYRUvfuMP">here!</a>
-  </template>
-  </WelcomeItem>
+    <DiscordComponent></DiscordComponent>
   </main>
 </template> 
 
