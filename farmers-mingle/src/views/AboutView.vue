@@ -1,8 +1,8 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+  <main>
+    <AboutComponent></AboutComponent>>
+  </main>
+</template> 
 
 <style>
 @media (min-width: 1024px) {
