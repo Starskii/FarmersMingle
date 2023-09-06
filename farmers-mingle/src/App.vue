@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
+import { Analytics } from '@vercel/analytics/react';
 </script>
 
 <template>
@@ -25,6 +26,7 @@ import HelloWorld from "./components/HelloWorld.vue";
   </header>
 
   <RouterView />
+  <Analytics></Analytics>
 </template>
 
 <style scoped>
