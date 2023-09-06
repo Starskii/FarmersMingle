@@ -14,9 +14,9 @@ const count = ref(0);
 
 // curl -H 'Authorization: ' 
 
-function onMounted () {
-  console.log('Hello World');
-}
+onMounted(() => {
+  console.log('Hello world!');
+})
 
 function increment() {
   count.value++;
