@@ -1,6 +1,6 @@
 <template>
   <main>
-    <AboutComponent></AboutComponent>>
+    <AboutComponent></AboutComponent>
   </main>
 </template> 
 
