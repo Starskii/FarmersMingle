@@ -12,13 +12,16 @@ import { collection, getDocs } from 'firebase/firestore/lite';
 
 const clanRef = collection(db, "clans");
 const members = ref(null);
+const clanName = ref(null);
 
 // curl -H 'Authorization: ' 
 
 onMounted(async () => {
       const snapshot = await getDocs(clanRef);
       snapshot.forEach((doc) => {
-          members.value = doc.data().members;
+        console.log(doc.data());
+        clanName.value =doc.data().name;
+        members.value = doc.data().members;
       })
     });
 
@@ -30,8 +33,10 @@ onMounted(async () => {
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>About our Clan</template>
-    <p>{{ members }}</p>
+    <template #heading>{{ clanName }}</template>
+    <li v-for="member in members">
+    {{ member.name }} {{ member.role }} {{ member.trophies }}
+    </li>
   </WelcomeItem>
 </template>
 
