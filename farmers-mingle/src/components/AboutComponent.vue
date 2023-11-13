@@ -36,6 +36,9 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
+    <li v-for="member in members">
+    {{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}
+    </li>
   </WelcomeItem>
 </template>
 
