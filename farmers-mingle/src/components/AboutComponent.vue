@@ -16,6 +16,14 @@ const members: Record<string, string>[] = []
 const clanName = ref(null);
 // curl -H 'Authorization: ' 
 
+function navigateToProfile(tag: string){
+  router.addRoute({
+    path: "/" + tag,
+    component: () => import("../views/PlayerProfile.vue")
+  });
+  router.push("/" + tag);
+}
+
 onMounted(async () => {
       const snapshot = await getDocs(clanRef);
       snapshot.forEach((doc) => {
@@ -38,7 +46,7 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <li v-for="member in members"> 
-      <button id="myButton" class="foo bar">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</button>
+      <button id="myButton" @click="">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</button>
     </li>
   </WelcomeItem>
 </template>
