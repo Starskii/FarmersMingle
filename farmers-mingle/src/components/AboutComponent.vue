@@ -16,7 +16,10 @@ const members = ref(null);
 // curl -H 'Authorization: ' 
 
 onMounted(async () => {
-      console.log(clanRef.firestore.toJSON())
+      const snapshot = await getDocs(clanRef);
+      snapshot.forEach((doc) => {
+          console.log(doc.data());
+      })
     });
 
 
