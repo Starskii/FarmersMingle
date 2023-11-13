@@ -20,7 +20,7 @@ onMounted(async () => {
       const snapshot = await getDocs(clanRef);
       snapshot.forEach((doc) => {
         console.log(doc.data());
-        clanName.value =doc.data().name;
+        clanName.value = doc.data().name;
         members.value = doc.data().members;
       })
     });
@@ -34,7 +34,7 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
-    <li v-for="member in members">
+    <li v-for="member in members.value">
     {{ member.name }} {{ member.role }} {{ member.trophies }}
     </li>
   </WelcomeItem>
