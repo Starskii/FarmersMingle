@@ -37,11 +37,8 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
-    <li v-for="member in members">
-    {{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }} 
-      <router-link :to="{name: member['tag']}">
-        <button id="myButton" class="foo bar">Go!</button>
-      </router-link>
+    <li v-for="member in members"> 
+      <button id="myButton" class="foo bar">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</button>
     </li>
   </WelcomeItem>
 </template>
