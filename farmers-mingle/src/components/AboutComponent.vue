@@ -18,7 +18,7 @@ const members = ref(null);
 onMounted(async () => {
       const snapshot = await getDocs(clanRef);
       snapshot.forEach((doc) => {
-          console.log(doc.data());
+          members.value = doc.data().members;
       })
     });
 
@@ -31,6 +31,7 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>About our Clan</template>
+    <p>{{ members }}</p>
   </WelcomeItem>
 </template>
 
