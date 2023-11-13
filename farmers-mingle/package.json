@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.2",
+    "add-dependencies": "^1.1.0",
     "analytics": "github:vercel/analytics",
     "axios": "^1.5.0",
+    "firebase": "^10.6.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2"
   },
