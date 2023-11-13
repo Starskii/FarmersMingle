@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import db from '../firestore';
+import { collection, getDocs } from 'firebase/firestore/lite';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,4 +27,21 @@ const router = createRouter({
   ],
 });
 
+const clanRef = collection(db, "clans");
+const members: Record<string, string>[] = []
+
+const snapshot = await getDocs(clanRef);
+snapshot.forEach((doc) => {
+  doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
+      members.push({"name": member.name, "role": member.role, "trophies": member.trophies, "tag": member.tag})
+  })
+});
+
+members.forEach((member) => {
+  router.addRoute({
+    path: member['tag'],
+    name: member['tag'],
+    component: () => import("../views/DiscordView.vue")     
+  })
+});
 export default router;
