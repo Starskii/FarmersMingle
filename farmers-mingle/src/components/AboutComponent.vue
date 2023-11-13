@@ -46,7 +46,7 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <li v-for="member in members"> 
-      <button id="myButton" @click="">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</button>
+      <button id="myButton" @click="navigateToProfile(member['tag'])"> {{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</button>
     </li>
   </WelcomeItem>
 </template>
