@@ -7,15 +7,16 @@ import CommunityIcon from "./icons/IconCommunity.vue";
 import SupportIcon from "./icons/IconSupport.vue";
 import { ref, watchEffect, onMounted } from 'vue'
 import axios from 'axios';
+import db from '../firestore';
+import { collection, getDocs } from 'firebase/firestore/lite';
 
-
-
+const clanRef = collection(db, "clans");
 const members = ref(null);
 
 // curl -H 'Authorization: ' 
 
 onMounted(async () => {
-    console.log('hello world');
+      console.log(clanRef.firestore.toJSON())
     });
 
 
