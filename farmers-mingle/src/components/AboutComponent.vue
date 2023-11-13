@@ -11,7 +11,7 @@ import db from '../firestore';
 import { collection, getDocs } from 'firebase/firestore/lite';
 
 const clanRef = collection(db, "clans");
-let members = [{}];
+const members: Record<string, string>[] = []
 const clanName = ref(null);
 // curl -H 'Authorization: ' 
 
@@ -20,8 +20,12 @@ onMounted(async () => {
       snapshot.forEach((doc) => {
         console.log(doc.data().members);
         clanName.value = doc.data().name;
-      })
-    });
+        doc.data().members.forEach((member: { name: string; role: string; trophies: string; }) => {
+            members.push({"name": member.name, "role": member.role, "trophies": member.trophies})
+        })
+      });
+      console.log(members);
+    })
 
 
 </script>
