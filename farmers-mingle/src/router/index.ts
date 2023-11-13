@@ -30,12 +30,14 @@ const router = createRouter({
 const clanRef = collection(db, "clans");
 const members: Record<string, string>[] = []
 
-const snapshot = await getDocs(clanRef);
-snapshot.forEach((doc) => {
-  doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
-      members.push({"name": member.name, "role": member.role, "trophies": member.trophies, "tag": member.tag})
-  })
-});
+async () => {
+  const snapshot = await getDocs(clanRef);
+  snapshot.forEach((doc) => {
+    doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
+        members.push({"name": member.name, "role": member.role, "trophies": member.trophies, "tag": member.tag})
+    })
+  }); 
+}
 
 members.forEach((member) => {
   router.addRoute({
