@@ -1,5 +1,5 @@
 {
-  "dependencies": {
+  "devDependencies": {
     "firebase": "^10.6.0"
   }
 }
