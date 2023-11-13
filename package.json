@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "firebase": "^10.6.0"
+  },
+  "dependencies": {
+    "add-dependencies": "^1.1.0"
   }
 }
