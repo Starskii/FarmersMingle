@@ -18,10 +18,10 @@ const clanName = ref(null);
 
 function navigateToProfile(tag: string){
   router.addRoute({
-    path: "/" + tag,
+    path: "/about/player/" + tag,
     component: () => import("../views/PlayerProfile.vue")
   });
-  router.push("/" + tag);
+  router.push("/about/player/" + tag);
 }
 
 onMounted(async () => {
