@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import DiscordComponent from "@/components/DiscordComponent.vue";
+import PlayerComponent from "@/components/PlayerComponent.vue";
 </script>
 
 <template>
   <main>
-    <DiscordComponent></DiscordComponent>
+    <PlayerComponent></PlayerComponent>
   </main>
 </template> 
 
