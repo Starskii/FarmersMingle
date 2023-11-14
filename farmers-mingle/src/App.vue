@@ -27,7 +27,7 @@ inject();
     </div>
   </header>
 
-  <RouterView />
+  <v-content><RouterView /></v-content>
 </template>
 
 <style scoped>
