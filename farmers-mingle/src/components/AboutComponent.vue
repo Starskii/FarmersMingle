@@ -18,7 +18,7 @@ function navigateToProfile(tag: string){
     path: "/about/player/" + tag,
     component: PlayerProfile
   });
-  console.log(router.getRoutes);
+  console.log(router.getRoutes());
   router.push("/about/player/" + tag);
 }
 
