@@ -24,14 +24,10 @@ const playerRef = doc(db, "players", playerId);
 onMounted(async () => {
       const snapshot = await getDoc(playerRef);
       playerName.value = snapshot.data()?.name;
+      console.log(playerName.value);
     });
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>{{ playerName }}</template>
-  </WelcomeItem>
+    <h1>{{ playerName }}</h1>
 </template>
