@@ -40,6 +40,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  hello world
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
