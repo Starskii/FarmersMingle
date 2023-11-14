@@ -34,11 +34,11 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
-    <ol>
-      <li v-for="member in members">  
+    <ul>
+      <li> v-for="member in members">  
         <RouterLink :to="{ name: 'playerProfile', params: { id: member['tag'] }}">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</RouterLink>
       </li>
-    </ol>
+    </ul>
   </WelcomeItem>
 </template>
 
