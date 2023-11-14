@@ -35,7 +35,7 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <ul>
-      <li> v-for="member in members">  
+      <li v-for="member in members">   
         <RouterLink :to="{ name: 'playerProfile', params: { id: member['tag'] }}">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</RouterLink>
       </li>
     </ul>
