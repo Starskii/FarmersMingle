@@ -18,13 +18,14 @@ const warPreference = ref(null);
 const donations = ref(null);
 const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
-const playerId = router.currentRoute.value.path.split("/")[2].replace("%23", "#");
-const playerRef = doc(db, "players", playerId);
 
 onMounted(async () => {
-      const snapshot = await getDoc(playerRef);
-      playerName.value = snapshot.data()?.name;
-      console.log(playerName.value);
+    const playerId = router.currentRoute.value.path.split("/")[2].replace("%23", "#");
+    console.log(playerId);
+    const playerRef = doc(db, "players", playerId);
+    const snapshot = await getDoc(playerRef);
+    playerName.value = snapshot.data()?.name;
+    console.log(playerName.value);
     });
 </script>
 
