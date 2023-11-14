@@ -21,14 +21,35 @@ const clanCapitalContributions = ref(null);
 
 onMounted(async () => {
     const playerId = router.currentRoute.value.path.split("/")[3].replace("%23", "#");
-    console.log(playerId);
     const playerRef = doc(db, "players", playerId);
     const snapshot = await getDoc(playerRef);
     playerName.value = snapshot.data()?.name;
-    console.log(playerName.value);
+    townHallLevel.value = snapshot.data()?.townHallLevel;
+    townHallWeaponLevel.value = snapshot.data()?.townHallWeaponLevel;
+    expLevel.value = snapshot.data()?.expLevel;
+    bestTrophies.value = snapshot.data()?.bestTrophies;
+    warStars.value = snapshot.data()?.warStars;
+    attackWins.value = snapshot.data()?.attackWins;
+    defenseWins.value = snapshot.data()?.defenseWins;
+    warPreference.value = snapshot.data()?.warPreference;
+    donations.value = snapshot.data()?.donations;
+    donationsReceived.value = snapshot.data()?.donationsReceived;
+    clanCapitalContributions.value = snapshot.data()?.clanCapitalContributions;
     });
 </script>
 
 <template>
-    <h1>{{ playerName }}</h1>
+    <h1>Name: {{ playerName }}</h1>
+    <p> townHallLevel: {{ townHallLevel }}</p>
+    <p> townHallWeaponLevel: {{ townHallWeaponLevel }}</p>
+    <p> expLevel: {{ expLevel }}</p>
+    <p> bestTrophies: {{ bestTrophies }}</p>
+    <p> warStars: {{ warStars }}</p>
+    <p> attackWins: {{ attackWins }}</p>
+    <p> defenseWins: {{ defenseWins }}</p>
+    <p> warPreference: {{ warPreference }}</p>
+    <p> donations: {{ donations }}</p>
+    <p> donationsReceived: {{ donationsReceived }}</p>
+    <p> clanCapitalContributions: {{ clanCapitalContributions }}</p>
+
 </template>
