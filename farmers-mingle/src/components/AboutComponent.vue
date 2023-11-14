@@ -4,9 +4,10 @@ import DocumentationIcon from "./icons/IconDocumentation.vue";
 import { ref, watchEffect, onMounted } from 'vue';
 import db from '../firestore';
 import { collection, getDocs } from 'firebase/firestore/lite';
-import router from "../router/index";
 import PlayerProfile from "../views/PlayerProfile.vue";
+import { useRouter, useRoute } from 'vue-router'
 
+const router = useRouter();
 const clanRef = collection(db, "clans");
 const members: Record<string, string>[] = [];
 const clanName = ref(null);
@@ -19,6 +20,7 @@ function navigateToProfile(tag: string){
     component: PlayerProfile
   });
   console.log(router.getRoutes());
+  
   router.push("/about/player/" + tag);
 }
 
