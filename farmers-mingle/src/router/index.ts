@@ -21,6 +21,11 @@ const router = createRouter({
       path: "/discord",
       name: "discord",
       component: () => import("../views/DiscordView.vue")
+    },
+    {
+      path: "/about/players/:id",
+      name: "playerProfile",
+      component: () => import("../views/PlayerProfile.vue")
     }
   ],
 });
