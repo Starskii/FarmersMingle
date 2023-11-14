@@ -5,6 +5,7 @@ import { ref, watchEffect, onMounted } from 'vue';
 import db from '../firestore';
 import { collection, getDocs } from 'firebase/firestore/lite';
 import router from "../router/index";
+import PlayerProfile from "../views/PlayerProfile.vue";
 
 const clanRef = collection(db, "clans");
 const members: Record<string, string>[] = [];
@@ -13,9 +14,11 @@ const clanName = ref(null);
 
 function navigateToProfile(tag: string){
   router.addRoute({
+    name: tag,
     path: "/about/player/" + tag,
-    component: () => import("../views/PlayerProfile.vue")
+    component: PlayerProfile
   });
+  console.log(router.getRoutes);
   router.push("/about/player/" + tag);
 }
 
