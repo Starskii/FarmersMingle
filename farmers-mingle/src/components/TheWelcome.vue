@@ -12,7 +12,7 @@ import SupportIcon from "./icons/IconSupport.vue";
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>What is Farmer's Mingle all About?</template>
+    <template #heading>Welcome to the Farm!</template>
       Farmers Mingle is a Clan on Clash of Clans
   </WelcomeItem>
 </template>
