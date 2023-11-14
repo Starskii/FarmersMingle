@@ -20,7 +20,7 @@ const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
 
 onMounted(async () => {
-    const playerId = router.currentRoute.value.path.split("/")[2].replace("%23", "#");
+    const playerId = router.currentRoute.value.path.split("/")[3].replace("%23", "#");
     console.log(playerId);
     const playerRef = doc(db, "players", playerId);
     const snapshot = await getDoc(playerRef);
