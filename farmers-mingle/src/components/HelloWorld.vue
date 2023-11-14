@@ -8,7 +8,7 @@ defineProps<{
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      Welcome to Farmer's Mingle official Clan Website!
+      Welcome to the Farmer's Mingle CoC Community Website!
     </h3>
   </div>
 </template>
