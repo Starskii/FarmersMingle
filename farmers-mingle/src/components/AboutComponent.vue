@@ -13,17 +13,6 @@ const members: Record<string, string>[] = [];
 const clanName = ref(null);
 // curl -H 'Authorization: ' 
 
-function navigateToProfile(tag: string){
-  router.addRoute({
-    name: tag,
-    path: "/about/player/" + tag,
-    component: PlayerProfile
-  });
-  console.log(router.getRoutes());
-  
-  router.push("/about/player/" + tag);
-}
-
 onMounted(async () => {
       const snapshot = await getDocs(clanRef);
       snapshot.forEach((doc) => {
@@ -46,7 +35,7 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <li v-for="member in members"> 
-      <button id="myButton" @click="navigateToProfile(member['tag'])"> {{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</button>
+      <RouterLink :to="{ name: 'playerProfile', params: { id: member['tag'] }}">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</RouterLink>
     </li>
   </WelcomeItem>
 </template>
