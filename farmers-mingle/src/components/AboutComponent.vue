@@ -5,7 +5,10 @@ import { ref, watchEffect, onMounted } from 'vue';
 import db from '../firestore';
 import { collection, getDocs } from 'firebase/firestore/lite';
 import PlayerProfile from "../views/PlayerProfile.vue";
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router';
+import Table from "./Table.vue";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Table from "./Table.vue";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
@@ -19,7 +22,7 @@ onMounted(async () => {
         console.log(doc.data().members);
         clanName.value = doc.data().name;
         doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
-            members.push({"name": member.name, "role": member.role, "trophies": member.trophies, "tag": member.tag})
+            members.push({name: member.name, role: member.role, trophies: member.trophies, tag: member.tag})
         })
       });
       console.log(members);
@@ -34,9 +37,7 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
-      <li v-for="member in members">   
-        <RouterLink :to="{ name: 'playerProfile', params: { id: member['tag'] }}">{{ member["name"] }} | {{ member["role"] }} | {{ member["trophies"] }}</RouterLink>
-      </li>
+      <TableVue players="members"></TableVue>
   </WelcomeItem>
 </template>
 
