@@ -36,11 +36,11 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <template>
-    <table id="tableComponent" class="table table-bordered table-striped" v-if="members.value.length">
+    <table id="tableComponent" class="table table-bordered table-striped">
         <thead>
         <tr>
             <!-- loop through each value of the fields to get the table header -->
-            <th v-for="attribute in  Object.keys(members.value[0])" :key='attribute'>
+            <th v-for="attribute in  Object.keys(members?.value[0])" :key='attribute'>
                 {{ attribute }} <i class="bi bi-sort-alpha-down" aria-label='Sort Icon'></i>
             </th>
         </tr>
