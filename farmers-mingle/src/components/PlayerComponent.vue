@@ -35,21 +35,22 @@ onMounted(async () => {
     donations.value = snapshot.data()?.donations;
     donationsReceived.value = snapshot.data()?.donationsReceived;
     clanCapitalContributions.value = snapshot.data()?.clanCapitalContributions;
-    });
+});
 </script>
 
+    <template #heading>Name: {{ playerName }}</template>
 <template>
-    <h1>Name: {{ playerName }}</h1>
-    <p> townHallLevel: {{ townHallLevel }}</p>
-    <p> townHallWeaponLevel: {{ townHallWeaponLevel }}</p>
-    <p> expLevel: {{ expLevel }}</p>
-    <p> bestTrophies: {{ bestTrophies }}</p>
-    <p> warStars: {{ warStars }}</p>
-    <p> attackWins: {{ attackWins }}</p>
-    <p> defenseWins: {{ defenseWins }}</p>
-    <p> warPreference: {{ warPreference }}</p>
-    <p> donations: {{ donations }}</p>
-    <p> donationsReceived: {{ donationsReceived }}</p>
-    <p> clanCapitalContributions: {{ clanCapitalContributions }}</p>
-
+    <ul>
+        <li> townHallLevel: {{ townHallLevel }}</li>
+        <li> townHallWeaponLevel: {{ townHallWeaponLevel }}</li>
+        <li> expLevel: {{ expLevel }}</li>
+        <li> bestTrophies: {{ bestTrophies }}</li>
+        <li> warStars: {{ warStars }}</li>
+        <li> attackWins: {{ attackWins }}</li>
+        <li> defenseWins: {{ defenseWins }}</li>
+        <li> warPreference: {{ warPreference }}</li>
+        <li> donations: {{ donations }}</li>
+        <li> donationsReceived: {{ donationsReceived }}</li>
+        <li> clanCapitalContributions: {{ clanCapitalContributions }}</li>
+    </ul>
 </template>
