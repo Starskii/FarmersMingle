@@ -36,7 +36,7 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <template>
-    <table id="tableComponent" class="table table-bordered table-striped" v-if="members.length">
+    <table id="tableComponent" class="table table-bordered table-striped">
         <thead>
         <tr>
             <!-- loop through each value of the fields to get the table header -->
