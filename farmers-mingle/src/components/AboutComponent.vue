@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import WelcomeItem from "./WelcomeItem.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
-import { ref, watchEffect, onMounted } from 'vue';
+import { ref, watchEffect, onMounted, befor, onBeforeMount } from 'vue';
 import db from '../firestore';
 import { collection, getDocs } from 'firebase/firestore/lite';
 import PlayerProfile from "../views/PlayerProfile.vue";
@@ -14,7 +14,7 @@ const members: Record<string, string>[] = [];
 const clanName = ref(null);
 // curl -H 'Authorization: ' 
 
-onMounted(async () => {
+onBeforeMount(async () => {
       const snapshot = await getDocs(clanRef);
       snapshot.forEach((doc) => {
         console.log(doc.data().members);
