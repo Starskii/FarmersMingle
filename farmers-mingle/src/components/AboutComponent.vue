@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import WelcomeItem from "./WelcomeItem.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
-import { ref, watchEffect, onMounted, onBeforeMount } from 'vue';
+import { ref, watchEffect, onMounted } from 'vue';
 import db from '../firestore';
 import { collection, getDocs } from 'firebase/firestore/lite';
 import PlayerProfile from "../views/PlayerProfile.vue";
@@ -14,7 +14,7 @@ const members: Record<string, string>[] = [];
 const clanName = ref(null);
 // curl -H 'Authorization: ' 
 
-onBeforeMount(async () => {
+onMounted(async () => {
       const snapshot = await getDocs(clanRef);
       snapshot.forEach((doc) => {
         console.log(doc.data().members);
@@ -36,7 +36,7 @@ onBeforeMount(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <template>
-    <table id="tableComponent" class="table table-bordered table-striped">
+    <table id="tableComponent" class="table table-bordered table-striped" v-if="members.length">
         <thead>
         <tr>
             <!-- loop through each value of the fields to get the table header -->
