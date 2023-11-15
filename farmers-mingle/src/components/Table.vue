@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import "bootstrap/dist/css/bootstrap.min.css";
-import { ref, watchEffect, onMounted } from 'vue';
 
 defineProps<{
   players: [{name: string, role: string; trophies: string, tag: string}]

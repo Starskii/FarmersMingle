@@ -7,7 +7,6 @@ import { collection, getDocs } from 'firebase/firestore/lite';
 import PlayerProfile from "../views/PlayerProfile.vue";
 import { useRouter, useRoute } from 'vue-router';
 import Table from "./Table.vue";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
