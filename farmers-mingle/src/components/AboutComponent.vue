@@ -10,7 +10,7 @@ import Table from "./Table.vue";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
-const members: Record<string, string>[] = [];
+const members = ref([]);
 const clanName = ref(null);
 // curl -H 'Authorization: ' 
 
@@ -20,7 +20,7 @@ onMounted(async () => {
         console.log(doc.data().members);
         clanName.value = doc.data().name;
         doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
-            members.push({"name": member.name, role: member.role, trophies: member.trophies, tag: member.tag})
+            members.value.push({"name": member.name, role: member.role, trophies: member.trophies, tag: member.tag})
         })
       });
       console.log(members);
