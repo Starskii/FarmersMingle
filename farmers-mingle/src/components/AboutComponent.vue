@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import WelcomeItem from "./WelcomeItem.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
-import { ref, watchEffect, onMounted, befor, onBeforeMount } from 'vue';
+import { ref, watchEffect, onMounted, onBeforeMount } from 'vue';
 import db from '../firestore';
 import { collection, getDocs } from 'firebase/firestore/lite';
 import PlayerProfile from "../views/PlayerProfile.vue";
