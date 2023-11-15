@@ -40,7 +40,7 @@ onMounted(async () => {
         <thead>
           <tr>
             <!-- loop through each value of the fields to get the table header -->
-            <template v-if="!members.value || !members.value.length">
+            <template v-if="!members || !members.value.length">
               Nothing To Show
             </template>
             <th v-for="attribute in  Object.keys(members.value[0])" :key='attribute'>
