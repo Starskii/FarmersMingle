@@ -8,7 +8,6 @@ import PlayerProfile from "../views/PlayerProfile.vue";
 import { useRouter, useRoute } from 'vue-router';
 import Table from "./Table.vue";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Table from "./Table.vue";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
@@ -37,7 +36,7 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
-      <TableVue players="members"></TableVue>
+      <Table players="members"></Table>
   </WelcomeItem>
 </template>
 
