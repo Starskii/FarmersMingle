@@ -10,7 +10,7 @@ import Table from "./Table.vue";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
-const members = ref([]);
+const members: { value: { name: string; role: string; trophies: string; tag: string; }[]; } = ref([]);
 const clanName = ref(null);
 // curl -H 'Authorization: ' 
 
@@ -20,7 +20,7 @@ onMounted(async () => {
         console.log(doc.data().members);
         clanName.value = doc.data().name;
         doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
-            members.value.push({"name": member.name, role: member.role, trophies: member.trophies, tag: member.tag})
+            members.value.push({name: member.name, role: member.role, trophies: member.trophies, tag: member.tag})
         })
       });
       console.log(members);
@@ -40,14 +40,14 @@ onMounted(async () => {
         <thead>
         <tr>
             <!-- loop through each value of the fields to get the table header -->
-            <th v-for="attribute in  Object.keys(members[0])" :key='attribute'>
+            <th v-for="attribute in  Object.keys(members.value[0])" :key='attribute'>
                 {{ attribute }} <i class="bi bi-sort-alpha-down" aria-label='Sort Icon'></i>
             </th>
         </tr>
         </thead>
         <tbody>
             <!-- Loop through the list get the each student data -->
-            <tr v-for="player in members">
+            <tr v-for="player in members.value">
                 <td v-for="attributeValue in player" :key='attributeValue'>{{ attributeValue }}</td>
             </tr>
         </tbody>
