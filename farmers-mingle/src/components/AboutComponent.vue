@@ -20,7 +20,7 @@ onMounted(async () => {
         console.log(doc.data().members);
         clanName.value = doc.data().name;
         doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
-            members.push({name: member.name, role: member.role, trophies: member.trophies, tag: member.tag})
+            members.push({"name": member.name, role: member.role, trophies: member.trophies, tag: member.tag})
         })
       });
       console.log(members);
@@ -35,7 +35,24 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
-      <Table players="members"></Table>
+    <template>
+    <table id="tableComponent" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <!-- loop through each value of the fields to get the table header -->
+            <th v-for="attribute in  Object.keys(members[0])" :key='attribute'>
+                {{ attribute }} <i class="bi bi-sort-alpha-down" aria-label='Sort Icon'></i>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the list get the each student data -->
+            <tr v-for="player in members">
+                <td v-for="attributeValue in player" :key='attributeValue'>{{ attributeValue }}</td>
+            </tr>
+        </tbody>
+    </table>
+</template>
   </WelcomeItem>
 </template>
 
