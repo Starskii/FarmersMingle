@@ -12,6 +12,7 @@ const router = useRouter();
 const clanRef = collection(db, "clans");
 const members: { value: { name: string; role: string; trophies: string; tag: string; }[]; } = ref([]);
 const clanName = ref(null);
+const loaded = ref(false)
 // curl -H 'Authorization: ' 
 
 onMounted(async () => {
@@ -24,6 +25,7 @@ onMounted(async () => {
     })
   });
   console.log(members);
+  loaded.value = true;
 })
 
 
@@ -40,7 +42,7 @@ onMounted(async () => {
         <thead>
           <tr>
             <!-- loop through each value of the fields to get the table header -->
-            <template v-if="!members || !members.value.length">
+            <template v-if="loaded">
               Nothing To Show
             </template>
             <th v-for="attribute in  Object.keys(members.value[0])" :key='attribute'>
