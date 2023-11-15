@@ -38,19 +38,24 @@ onMounted(async () => {
 });
 </script>
 
-    <template #heading>Name: {{ playerName }}</template>
 <template>
-    <ul>
-        <li> townHallLevel: {{ townHallLevel }}</li>
-        <li> townHallWeaponLevel: {{ townHallWeaponLevel }}</li>
-        <li> expLevel: {{ expLevel }}</li>
-        <li> bestTrophies: {{ bestTrophies }}</li>
-        <li> warStars: {{ warStars }}</li>
-        <li> attackWins: {{ attackWins }}</li>
-        <li> defenseWins: {{ defenseWins }}</li>
-        <li> warPreference: {{ warPreference }}</li>
-        <li> donations: {{ donations }}</li>
-        <li> donationsReceived: {{ donationsReceived }}</li>
-        <li> clanCapitalContributions: {{ clanCapitalContributions }}</li>
-    </ul>
+    <WelcomeItem>
+        <template #icon>
+            <DocumentationIcon />
+        </template>
+        <template #heading>Player: {{ playerName }}</template>
+        <ul>
+            <li> townHallLevel: {{ townHallLevel }}</li>
+            <li> townHallWeaponLevel: {{ townHallWeaponLevel }}</li>
+            <li> expLevel: {{ expLevel }}</li>
+            <li> bestTrophies: {{ bestTrophies }}</li>
+            <li> warStars: {{ warStars }}</li>
+            <li> attackWins: {{ attackWins }}</li>
+            <li> defenseWins: {{ defenseWins }}</li>
+            <li> warPreference: {{ warPreference }}</li>
+            <li> donations: {{ donations }}</li>
+            <li> donationsReceived: {{ donationsReceived }}</li>
+            <li> clanCapitalContributions: {{ clanCapitalContributions }}</li>
+        </ul>
+    </WelcomeItem>
 </template>
