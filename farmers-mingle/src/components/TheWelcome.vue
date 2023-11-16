@@ -9,9 +9,9 @@ import SupportIcon from "./icons/IconSupport.vue";
 
 <template>
     <div class="container">
-      <p>Howdy there, Clashers! If you're lookin' for a clan that's as friendly as a mule in a meadow and tough as a
+      <p><b>Howdy there, Clashers! If you're lookin' for a clan that's as friendly as a mule in a meadow and tough as a
         cornstalk in a storm, you've just hit the jackpot. Welcome to the heart and soul of Clash of Clans – Farmers
-        Mingle!</p>
+        Mingle!</b></p>
 
       <p><b>Farm Fresh Friendship:</b> At Farmers Mingle, we believe in neighborly camaraderie, just like
         sittin' on the porch, sippin' sweet tea with your kin. Our clan is a tight-knit family where everyone knows your
