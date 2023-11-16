@@ -8,12 +8,8 @@ import SupportIcon from "./icons/IconSupport.vue";
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Welcome to the Farm!</template>
     <div class="container">
+      <h1>Howdy, Fellow Clashers! Welcome to Farmers Mingle – Where Cozy Cornfields Meet Clan Conquests!</h1>
       <p>Howdy there, Clashers! If you're lookin' for a clan that's as friendly as a mule in a meadow and tough as a
         cornstalk in a storm, you've just hit the jackpot. Welcome to the heart and soul of Clash of Clans – Farmers
         Mingle!</p>
@@ -50,7 +46,6 @@ import SupportIcon from "./icons/IconSupport.vue";
       <p>So what are y'all waitin' for? Saddle up, dust off your boots, and let's ride into the sunset together at Farmers
         Mingle – the friendliest bunch of Clashin' hillbillies you'll ever meet! 🌄🌽</p>
     </div>
-  </WelcomeItem>
 </template>
 
 <style>
