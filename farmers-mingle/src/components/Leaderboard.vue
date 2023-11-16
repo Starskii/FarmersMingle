@@ -64,10 +64,11 @@ onMounted(async () => {
 .styled-table {
     opacity: .9;
     border-collapse: collapse;
-    margin: 25px 0;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    min-width: 80%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
