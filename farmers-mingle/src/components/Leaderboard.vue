@@ -38,7 +38,6 @@ onMounted(async () => {
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>{{ clanName }}</template>
     <table class="styled-table">
       <thead>
         <tr>
