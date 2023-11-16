@@ -62,14 +62,13 @@ onMounted(async () => {
 
 <style>
 .styled-table {
-    opacity: .9;
+    opacity: .95;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 80%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .styled-table thead tr {
