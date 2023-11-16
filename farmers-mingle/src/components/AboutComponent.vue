@@ -11,7 +11,7 @@ import { Player } from "./models/Player";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
-const members = ref<Player[]>();
+const members = ref<Player[]>([new Player("test", "test", "test", "test")]);
 const clanName = ref(null);
 const loaded = ref(false) 
 
