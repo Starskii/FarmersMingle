@@ -54,7 +54,8 @@ body {
 }
 
 li{
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .container {
