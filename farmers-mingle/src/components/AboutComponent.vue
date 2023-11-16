@@ -39,13 +39,11 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
-    <template>
       <table>
         <tr>
-          <th v-for="header in tblHeaders.values()"> {{ header }} </th>
+          <td v-for="header in tblHeaders.values()"> {{ header }} </td>
       </tr>
       </table>
-    </template>
   </WelcomeItem>
 </template>
 
