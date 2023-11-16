@@ -22,6 +22,7 @@ inject();
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/stats">Stats</RouterLink>
         <RouterLink to="/discord">Discord</RouterLink>
       </nav>
     </div>

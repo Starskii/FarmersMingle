@@ -39,6 +39,22 @@ onMounted(async () => {
       <DocumentationIcon />
     </template>
     <template #heading>{{ clanName }}</template>
+      <table>
+        <tr>
+          <td v-for="header in tblHeaders.values()"> {{ header }} </td>
+        </tr>
+        <tr v-for="member in members.values()">
+          <td>
+            <RouterLink :to="'/stats/players/' + member.tag.replace('#', '%23')">{{ member.name }}</RouterLink>
+          </td>
+          <td>
+            {{ member.role }}
+          </td>
+          <td>
+            {{ member.trophies }}
+          </td>
+        </tr>
+      </table>
   </WelcomeItem>
 </template>
 
