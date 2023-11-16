@@ -46,8 +46,8 @@ onMounted(async () => {
         </tr>
       </thead>
       <tbody>
-        <RouterLink v-for="member in members.values()" :to="'/stats/players/' + member.tag.replace('#', '%23')">
-        <tr>
+        <tr v-for="member in members.values()" >
+        <RouterLink :to="'/stats/players/' + member.tag.replace('#', '%23')">
           <td>
             {{ member.name }}
           </td>
@@ -57,8 +57,8 @@ onMounted(async () => {
           <td>
             {{ member.trophies }}
           </td>
-        </tr>
       </RouterLink>
+    </tr>
       </tbody>
     </table>
   </WelcomeItem>
