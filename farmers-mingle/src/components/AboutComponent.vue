@@ -40,21 +40,10 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <template>
-      <table id="tableComponent" class="table table-bordered table-striped">
+      <table>
         <thead>
-          <tr>
-            <!-- loop through each value of the fields to get the table header -->
-            <th v-for="attribute in tblHeaders.values()" :key='attribute'>
-              {{ attribute }} <i class="bi bi-sort-alpha-down" aria-label='Sort Icon'></i>
-            </th>
-          </tr>
+          <th v-for="header in tblHeaders.values()"> {{ header }} </th>
         </thead>
-        <tbody>
-          <!-- Loop through the list get the each student data -->
-          <tr v-for="player in members?.values()">
-            <td v-for="attributeValue in player" :key='attributeValue'>{{ attributeValue }}</td>
-          </tr>
-        </tbody>
       </table>
     </template>
   </WelcomeItem>
