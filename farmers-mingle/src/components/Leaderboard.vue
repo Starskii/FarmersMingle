@@ -47,9 +47,10 @@ onMounted(async () => {
       </thead>
       <tbody>
         <tr v-for="member in members.values()" >
-        <RouterLink :to="'/stats/players/' + member.tag.replace('#', '%23')">
           <td>
+            <RouterLink :to="'/stats/players/' + member.tag.replace('#', '%23')">
             {{ member.name }}
+            </RouterLink>
           </td>
           <td>
             {{ member.role }}
@@ -57,7 +58,6 @@ onMounted(async () => {
           <td>
             {{ member.trophies }}
           </td>
-      </RouterLink>
     </tr>
       </tbody>
     </table>
@@ -76,7 +76,7 @@ onMounted(async () => {
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #390e7e75;
     color: #ffffff;
     text-align: left;
 }
