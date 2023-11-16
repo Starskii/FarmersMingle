@@ -41,9 +41,9 @@ onMounted(async () => {
     <template #heading>{{ clanName }}</template>
     <template>
       <table>
-        <thead>
+        <tr>
           <th v-for="header in tblHeaders.values()"> {{ header }} </th>
-        </thead>
+      </tr>
       </table>
     </template>
   </WelcomeItem>
