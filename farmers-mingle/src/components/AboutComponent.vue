@@ -45,8 +45,7 @@ onMounted(async () => {
         </tr>
         <tr v-for="member in members.values()">
           <td v-for="attrib in member">
-            <RouterLink to="/about/players/{{ member.tag }}"></RouterLink>
-            {{ attrib }}
+            <RouterLink to="/about/players/{{ member.tag }}">{{ attrib }}</RouterLink>
           </td>
         </tr>
       </table>
