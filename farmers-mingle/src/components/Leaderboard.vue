@@ -84,7 +84,7 @@ onMounted(async () => {
 
 .styled-table th,
 .styled-table td {
-    border: 1px solid black;
+    border: 4px solid black;
     padding: 12px 15px;
 }
 
