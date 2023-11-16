@@ -11,7 +11,7 @@ import { Player } from "./models/Player";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
-const members = ref();
+const members = ref<Player[]>();
 const clanName = ref(null);
 const loaded = ref(false) 
 
@@ -22,7 +22,7 @@ onMounted(async () => {
     clanName.value = doc.data().name;
     doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
       let player = new Player(member.name, member.role, member.trophies, member.tag)
-      members.value.push(player)
+      members.value?.push(player)
     })
   });
   console.log(members);
@@ -46,14 +46,14 @@ onMounted(async () => {
             <template v-if="loaded">
               Nothing To Show
             </template>
-            <th v-for="attribute in  Object.keys(members.value[0])" :key='attribute'>
+            <th v-for="attribute in Object.keys(Player)" :key='attribute'>
               {{ attribute }} <i class="bi bi-sort-alpha-down" aria-label='Sort Icon'></i>
             </th>
           </tr>
         </thead>
         <tbody>
           <!-- Loop through the list get the each student data -->
-          <tr v-for="player in members.value">
+          <tr v-for="player in members?.values()">
             <td v-for="attributeValue in player" :key='attributeValue'>{{ attributeValue }}</td>
           </tr>
         </tbody>

@@ -1,8 +1,8 @@
 export class Player {
-    name: string;
-    role: string;
-    trophies: string;
-    tag: string;
+    name: string = "";
+    role: string = "";
+    trophies: string = "";
+    tag: string = "";
 
     constructor(name: string, role: string, trophies: string, tag: string) {
       this.name = name;
