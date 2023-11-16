@@ -9,31 +9,29 @@ import SupportIcon from "./icons/IconSupport.vue";
 
 <template>
     <div class="container">
-      <h1>Howdy, Fellow Clashers! Welcome to Farmers Mingle – Where Cozy Cornfields Meet Clan Conquests!</h1>
-      <body>
       <p>Howdy there, Clashers! If you're lookin' for a clan that's as friendly as a mule in a meadow and tough as a
         cornstalk in a storm, you've just hit the jackpot. Welcome to the heart and soul of Clash of Clans – Farmers
         Mingle!</p>
 
-      <li><p><strong>Farm Fresh Friendship:</strong> At Farmers Mingle, we believe in neighborly camaraderie, just like
+      <p><b>Farm Fresh Friendship:</b> At Farmers Mingle, we believe in neighborly camaraderie, just like
         sittin' on the porch, sippin' sweet tea with your kin. Our clan is a tight-knit family where everyone knows your
-        Clash name, and we've got room on the hay bales for you!</p></li>
+        Clash name, and we've got room on the hay bales for you!</p>
 
-        <li><p><strong>Down-Home Strategies:</strong> Our farmers might not be fancy city folks, but we sure know how to
+        <p><b>Down-Home Strategies:</b> Our farmers might not be fancy city folks, but we sure know how to
         strategize! From plowin' through Clan Wars to tending our bases like prized pumpkins, we've got the skills to make
-        your Clash experience as smooth as butter churnin' on a Sunday morning.</p></li>
+        your Clash experience as smooth as butter churnin' on a Sunday morning.</p>
 
-        <li><p><strong>Rooster-Crowin' Active Community:</strong> This ain't just a clan; it's a hootenanny! Our barn is always
+        <p><b>Rooster-Crowin' Active Community:</b> This ain't just a clan; it's a hootenanny! Our barn is always
         buzzing with activity – from lively clan chat to cheerin' each other on in battles. You won't find a more
-        welcoming bunch this side of the Clash river!</p></li>
+        welcoming bunch this side of the Clash river!</p>
 
-        <li><p><strong>Harvestin' Epic Clan Wars:</strong> Get ready to put on your overalls and dive into some serious Clan
+        <p><b>Harvestin' Epic Clan Wars:</b> Get ready to put on your overalls and dive into some serious Clan
         Wars! We're all about plannin' and executin' with the precision of a scarecrow keepin' watch. Victory is sweeter
-        than Grandma's apple pie, and we aim to have our fill!</p></li>
+        than Grandma's apple pie, and we aim to have our fill!</p>
 
-        <li><p><strong>Cornhuskin' Good Times:</strong> We're not just about Clash; we're about having a rootin' tootin' good
+        <p><b>Cornhuskin' Good Times:</b> We're not just about Clash; we're about having a rootin' tootin' good
         time! Participate in our corny jokes, lively events, and maybe even a hoedown or two. We're here to make Clashin'
-        as fun as a country fair!</p></li>
+        as fun as a country fair!</p>
 
       <h2>How to Hitch Your Wagon to Farmers Mingle:</h2>
 
@@ -70,5 +68,6 @@ li{
 
 p {
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }</style>
