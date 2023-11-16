@@ -40,12 +40,9 @@ onMounted(async () => {
     </template>
     <template #heading>{{ clanName }}</template>
     <table class="styled-table">
-      <thead>
         <tr>
           <th v-for="header in tblHeaders.values()"> {{ header }} </th>
         </tr>
-      </thead>
-      <tbody>
         <tr v-for="member in members.values()">
           <td>
             <RouterLink :to="'/stats/players/' + member.tag.replace('#', '%23')">{{ member.name }}</RouterLink>
@@ -57,7 +54,6 @@ onMounted(async () => {
             {{ member.trophies }}
           </td>
         </tr>
-      </tbody>
     </table>
   </WelcomeItem>
 </template>
