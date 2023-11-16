@@ -26,7 +26,7 @@ const router = createRouter({
       path: "/stats",
       name: "stats",
       component: () => import("../views/StatsView.vue")
-    }
+    },
     {
       path: "/stats/players/:id",
       name: "playerProfile",
