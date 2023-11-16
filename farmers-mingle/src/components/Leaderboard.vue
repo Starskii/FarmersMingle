@@ -64,7 +64,7 @@ onMounted(async () => {
 
 <style>
 .styled-table {
-    opacity: .6;
+    opacity: .9;
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -89,7 +89,7 @@ onMounted(async () => {
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    background-color: #0e2a8675;
 }
 
 .styled-table tbody tr:last-of-type {
