@@ -61,6 +61,8 @@ onMounted(async () => {
 
 <style>
 .center-head{
+  margin-top: 50px;
+  margin-bottom: 25px;
   text-align: center;
 }
 .styled-table {
