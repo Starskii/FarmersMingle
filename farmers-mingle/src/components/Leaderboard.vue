@@ -62,7 +62,6 @@ onMounted(async () => {
 
 <style>
 .styled-table {
-    opacity: .95;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -72,7 +71,7 @@ onMounted(async () => {
 }
 
 .styled-table thead tr {
-    background-color: #55063d75;
+    background-color: black;
     color: #ffffff;
     text-align: left;
     font-weight: 900;
@@ -80,7 +79,7 @@ onMounted(async () => {
 
 .styled-table th,
 .styled-table td {
-    border: 4px solid black;
+    border: 3px solid black;
     padding: 12px 15px;
 }
 
