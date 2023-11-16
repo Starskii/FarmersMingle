@@ -42,7 +42,10 @@ onMounted(async () => {
       <table>
         <tr>
           <td v-for="header in tblHeaders.values()"> {{ header }} </td>
-      </tr>
+        </tr>
+        <tr v-for="member in members.values()">
+          <td v-for="attrib in member">{{ attrib }}</td>
+        </tr>
       </table>
   </WelcomeItem>
 </template>
