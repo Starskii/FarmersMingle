@@ -13,28 +13,69 @@ import SupportIcon from "./icons/IconSupport.vue";
       <DocumentationIcon />
     </template>
     <template #heading>Welcome to the Farm!</template>
-      <p>Howdy there, Clashers! If you're lookin' for a clan that's as friendly as a mule in a meadow and tough as a cornstalk in a storm, you've just hit the jackpot. Welcome to the heart and soul of Clash of Clans – Farmers Mingle!
+    <div class="container">
+      <h1>Howdy, Fellow Clashers! Welcome to Farmers Mingle – Where Cozy Cornfields Meet Clan Conquests!</h1>
 
-🌾 Farm Fresh Friendship:
-At Farmers Mingle, we believe in neighborly camaraderie, just like sittin' on the porch, sippin' sweet tea with your kin. Our clan is a tight-knit family where everyone knows your Clash name, and we've got room on the hay bales for you!
+      <p>Howdy there, Clashers! If you're lookin' for a clan that's as friendly as a mule in a meadow and tough as a
+        cornstalk in a storm, you've just hit the jackpot. Welcome to the heart and soul of Clash of Clans – Farmers
+        Mingle!</p>
 
-🚜 Down-Home Strategies:
-Our farmers might not be fancy city folks, but we sure know how to strategize! From plowin' through Clan Wars to tending our bases like prized pumpkins, we've got the skills to make your Clash experience as smooth as butter churnin' on a Sunday morning.
+      <p><strong>Farm Fresh Friendship:</strong> At Farmers Mingle, we believe in neighborly camaraderie, just like
+        sittin' on the porch, sippin' sweet tea with your kin. Our clan is a tight-knit family where everyone knows your
+        Clash name, and we've got room on the hay bales for you!</p>
 
-🐓 Rooster-Crowin' Active Community:
-This ain't just a clan; it's a hootenanny! Our barn is always buzzing with activity – from lively clan chat to cheerin' each other on in battles. You won't find a more welcoming bunch this side of the Clash river!
+      <p><strong>Down-Home Strategies:</strong> Our farmers might not be fancy city folks, but we sure know how to
+        strategize! From plowin' through Clan Wars to tending our bases like prized pumpkins, we've got the skills to make
+        your Clash experience as smooth as butter churnin' on a Sunday morning.</p>
 
-🍅 Harvestin' Epic Clan Wars:
-Get ready to put on your overalls and dive into some serious Clan Wars! We're all about plannin' and executin' with the precision of a scarecrow keepin' watch. Victory is sweeter than Grandma's apple pie, and we aim to have our fill!
+      <p><strong>Rooster-Crowin' Active Community:</strong> This ain't just a clan; it's a hootenanny! Our barn is always
+        buzzing with activity – from lively clan chat to cheerin' each other on in battles. You won't find a more
+        welcoming bunch this side of the Clash river!</p>
 
-🌽 Cornhuskin' Good Times:
-We're not just about Clash; we're about having a rootin' tootin' good time! Participate in our corny jokes, lively events, and maybe even a hoedown or two. We're here to make Clashin' as fun as a country fair!
+      <p><strong>Harvestin' Epic Clan Wars:</strong> Get ready to put on your overalls and dive into some serious Clan
+        Wars! We're all about plannin' and executin' with the precision of a scarecrow keepin' watch. Victory is sweeter
+        than Grandma's apple pie, and we aim to have our fill!</p>
 
-How to Hitch Your Wagon to Farmers Mingle:
+      <p><strong>Cornhuskin' Good Times:</strong> We're not just about Clash; we're about having a rootin' tootin' good
+        time! Participate in our corny jokes, lively events, and maybe even a hoedown or two. We're here to make Clashin'
+        as fun as a country fair!</p>
 
-    Lasso Us in Clash: Search "Farmers Mingle" in Clash of Clans and throw us a rope by sendin' a join request.
-    Moonshine Messenger (Discord): Swing by our Discord still and join the chatter. It's where we plot our next farm raids and share tales of epic battles.
+      <h2>How to Hitch Your Wagon to Farmers Mingle:</h2>
 
-So what are y'all waitin' for? Saddle up, dust off your boots, and let's ride into the sunset together at Farmers Mingle – the friendliest bunch of Clashin' hillbillies you'll ever meet! 🌄🌽</p>
+      <ol>
+        <li><strong>Lasso Us in Clash:</strong> Search "Farmers Mingle" in Clash of Clans and throw us a rope by sendin' a
+          join request.</li>
+        <li><strong>Moonshine Messenger (Discord):</strong> Swing by our Discord still and join the chatter. It's where we
+          plot our next farm raids and share tales of epic battles.</li>
+      </ol>
+
+      <p>So what are y'all waitin' for? Saddle up, dust off your boots, and let's ride into the sunset together at Farmers
+        Mingle – the friendliest bunch of Clashin' hillbillies you'll ever meet! 🌄🌽</p>
+    </div>
   </WelcomeItem>
 </template>
+
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #8b4513;
+}
+
+p {
+  line-height: 1.6;
+}</style>
