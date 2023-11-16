@@ -42,7 +42,6 @@ import SupportIcon from "./icons/IconSupport.vue";
 
       <p>So what are y'all waitin' for? Saddle up, dust off your boots, and let's ride into the sunset together at Farmers
         Mingle – the friendliest bunch of Clashin' hillbillies you'll ever meet! 🌄🌽</p>
-      </body>
     </div>
 </template>
 
