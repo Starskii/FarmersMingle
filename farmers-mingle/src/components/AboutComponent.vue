@@ -11,7 +11,8 @@ import { Player } from "./models/Player";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
-const members = ref<Player[]>([new Player("test", "test", "test", "test")]);
+const tblHeaders = ref(['Name', 'Role', 'Tag', 'Trophies'])
+const members = ref<Player[]>([]);
 const clanName = ref(null);
 const loaded = ref(false) 
 
@@ -46,7 +47,7 @@ onMounted(async () => {
             <template v-if="loaded">
               Nothing To Show
             </template>
-            <th v-for="attribute in Object.keys(Player)" :key='attribute'>
+            <th v-for="attribute in tblHeaders.values()" :key='attribute'>
               {{ attribute }} <i class="bi bi-sort-alpha-down" aria-label='Sort Icon'></i>
             </th>
           </tr>
