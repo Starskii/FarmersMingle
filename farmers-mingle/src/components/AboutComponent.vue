@@ -7,13 +7,13 @@ import { collection, getDocs } from 'firebase/firestore/lite';
 import PlayerProfile from "../views/PlayerProfile.vue";
 import { useRouter, useRoute } from 'vue-router';
 import Table from "./Table.vue";
+import { Player } from "./models/Player";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
-const members: { value: { name: string; role: string; trophies: string; tag: string; }[]; } = ref([]);
+const members = ref();
 const clanName = ref(null);
-const loaded = ref(false)
-// curl -H 'Authorization: ' 
+const loaded = ref(false) 
 
 onMounted(async () => {
   const snapshot = await getDocs(clanRef);
@@ -21,7 +21,8 @@ onMounted(async () => {
     console.log(doc.data().members);
     clanName.value = doc.data().name;
     doc.data().members.forEach((member: { name: string; role: string; trophies: string, tag: string; }) => {
-      members.value.push({ name: member.name, role: member.role, trophies: member.trophies, tag: member.tag })
+      let player = new Player(member.name, member.role, member.trophies, member.tag)
+      members.value.push(player)
     })
   });
   console.log(members);
