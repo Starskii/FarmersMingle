@@ -56,6 +56,10 @@ body {
   padding: 20px;
 }
 
+li{
+  margin-left: 20px;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
@@ -66,4 +70,5 @@ body {
 
 p {
   line-height: 1.6;
+  margin-bottom: 20px;
 }</style>
