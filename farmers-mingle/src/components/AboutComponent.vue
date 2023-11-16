@@ -44,7 +44,10 @@ onMounted(async () => {
           <td v-for="header in tblHeaders.values()"> {{ header }} </td>
         </tr>
         <tr v-for="member in members.values()">
-          <td v-for="attrib in member">{{ attrib }}</td>
+          <td v-for="attrib in member">
+            <RouterLink to="/about/players/{{ member.tag }}"></RouterLink>
+            {{ attrib }}
+          </td>
         </tr>
       </table>
   </WelcomeItem>
