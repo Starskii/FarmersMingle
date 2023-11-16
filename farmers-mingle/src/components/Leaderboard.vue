@@ -34,6 +34,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  <h2 class="center-head">Clan Leaderboard</h2>
     <table class="styled-table">
       <thead>
         <tr>
@@ -59,6 +60,9 @@ onMounted(async () => {
 </template>
 
 <style>
+.center-head{
+  text-align: center;
+}
 .styled-table {
     border-collapse: collapse;
     margin-left: auto;
