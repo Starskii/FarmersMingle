@@ -11,7 +11,7 @@ import { Player } from "./models/Player";
 
 const router = useRouter();
 const clanRef = collection(db, "clans");
-const tblHeaders = ref(['Name', 'Role', 'Tag', 'Trophies'])
+const tblHeaders = ref(['Name', 'Role', 'Trophies'])
 const members = ref<Player[]>([]);
 const clanName = ref(null);
 const loaded = ref(false) 
@@ -44,8 +44,14 @@ onMounted(async () => {
           <td v-for="header in tblHeaders.values()"> {{ header }} </td>
         </tr>
         <tr v-for="member in members.values()">
-          <td v-for="attrib in member">
-            <RouterLink to="/about/players/{{ member.tag }}">{{ attrib }}</RouterLink>
+          <td>
+            <RouterLink to="/about/players/{{ member.tag }}">{{ member.name }}</RouterLink>
+          </td>
+          <td>
+            {{ member.role }}
+          </td>
+          <td>
+            {{ member.trophies }}
           </td>
         </tr>
       </table>
