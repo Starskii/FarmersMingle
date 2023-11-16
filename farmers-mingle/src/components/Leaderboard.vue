@@ -79,11 +79,12 @@ onMounted(async () => {
     background-color: #55063d75;
     color: #ffffff;
     text-align: left;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .styled-table th,
 .styled-table td {
+    border: 1px solid black;
     padding: 12px 15px;
 }
 
