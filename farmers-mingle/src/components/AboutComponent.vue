@@ -44,9 +44,6 @@ onMounted(async () => {
         <thead>
           <tr>
             <!-- loop through each value of the fields to get the table header -->
-            <template v-if="loaded">
-              Nothing To Show
-            </template>
             <th v-for="attribute in tblHeaders.values()" :key='attribute'>
               {{ attribute }} <i class="bi bi-sort-alpha-down" aria-label='Sort Icon'></i>
             </th>
