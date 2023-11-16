@@ -76,9 +76,10 @@ onMounted(async () => {
 }
 
 .styled-table thead tr {
-    background-color: #390e7e75;
+    background-color: #55063d75;
     color: #ffffff;
     text-align: left;
+    font-weight: bold;
 }
 
 .styled-table th,
