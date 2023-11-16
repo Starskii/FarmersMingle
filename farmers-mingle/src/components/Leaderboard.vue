@@ -86,6 +86,7 @@ onMounted(async () => {
 
 .styled-table tbody tr {
     border-bottom: 1px solid #dddddd;
+    background-color: #390e7e75;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
