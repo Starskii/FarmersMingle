@@ -45,7 +45,7 @@ onMounted(async () => {
         </tr>
         <tr v-for="member in members.values()">
           <td>
-            <RouterLink to="/about/players/{member.tag}">{{ member.name }}</RouterLink>
+            <RouterLink :to="{path: '/about/players/' + member.tag}">{{ member.name }}</RouterLink>
           </td>
           <td>
             {{ member.role }}
