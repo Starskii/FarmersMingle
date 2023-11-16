@@ -35,9 +35,6 @@ onMounted(async () => {
 
 <template>
   <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
     <table class="styled-table">
       <thead>
         <tr>
