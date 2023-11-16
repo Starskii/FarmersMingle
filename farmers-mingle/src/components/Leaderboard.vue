@@ -34,7 +34,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  <WelcomeItem>
     <table class="styled-table">
       <thead>
         <tr>
@@ -57,7 +56,6 @@ onMounted(async () => {
     </tr>
       </tbody>
     </table>
-  </WelcomeItem>
 </template>
 
 <style>
