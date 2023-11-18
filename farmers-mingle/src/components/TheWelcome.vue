@@ -60,6 +60,7 @@ li{
 }
 
 .container {
+  margin-top: 20px;
   max-width: 800px;
   margin: auto;
   padding: 20px;
