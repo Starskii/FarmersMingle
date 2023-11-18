@@ -6,6 +6,7 @@ import { collection, doc, getDoc } from 'firebase/firestore/lite';
 import { onMounted, ref } from "vue";
 import router from "@/router";
 
+
 const playerName = ref(null);
 const townHallLevel = ref(null);
 const townHallWeaponLevel = ref(null);
@@ -18,7 +19,9 @@ const warPreference = ref(null);
 const donations = ref(null);
 const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
-const value_over_time = [1,3,7,9,23,18,5,1];
+const series = ref([1, 2, 3, 2, 1]);
+
+const options = ref({});
 
 onMounted(async () => {
     const playerId = router.currentRoute.value.path.split("/")[3].replace("%23", "#");
@@ -40,7 +43,9 @@ onMounted(async () => {
 </script>
 
 <template>
-    <line-chart :data="{'2017-05-13': 2, '2017-05-14': 5}"></line-chart>
+    <div>
+      <apexchart width="380" type="donut" :options="options" :series="series"></apexchart>
+    </div>
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
