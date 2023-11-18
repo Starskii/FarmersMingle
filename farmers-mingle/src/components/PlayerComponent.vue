@@ -18,6 +18,7 @@ const warPreference = ref(null);
 const donations = ref(null);
 const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
+const value_over_time = [1,3,7,9,23,18,5,1];
 
 onMounted(async () => {
     const playerId = router.currentRoute.value.path.split("/")[3].replace("%23", "#");
@@ -39,6 +40,7 @@ onMounted(async () => {
 </script>
 
 <template>
+    <line-chart :data="{'2017-05-13': 2, '2017-05-14': 5}"></line-chart>
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
