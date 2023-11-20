@@ -5,6 +5,7 @@ import db from '../firestore';
 import { collection, doc, getDoc } from 'firebase/firestore/lite';
 import { onMounted, ref } from "vue";
 import router from "@/router";
+import VueApexCharts from "vue3-apexcharts";
 
 const playerName = ref(null);
 const townHallLevel = ref(null);
