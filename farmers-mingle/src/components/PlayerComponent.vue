@@ -46,11 +46,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <template>
-        <div>
-            <VueApexCharts width="500" type="bar" :options="options" :series="series"></VueApexCharts>
-        </div>
-    </template>
+    <VueApexCharts width="500" type="bar" :options="options" :series="series"></VueApexCharts>
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
