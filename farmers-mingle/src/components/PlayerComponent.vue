@@ -45,6 +45,7 @@ onMounted(async () => {
 <template>
     <template>
         <div>
+            <h1>chart: </h1>
             <apexchart width="500" type="bar" :options="options" :series="series"></apexchart>
         </div>
     </template>
