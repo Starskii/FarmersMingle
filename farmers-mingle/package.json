@@ -13,6 +13,7 @@
     "@vercel/analytics": "^1.0.2",
     "add-dependencies": "^1.1.0",
     "analytics": "github:vercel/analytics",
+    "apexcharts": "^3.44.0",
     "axios": "^1.5.0",
     "firebase": "^10.6.0",
     "vue": "^3.2.37",
