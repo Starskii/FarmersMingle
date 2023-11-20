@@ -6,7 +6,6 @@ import { collection, doc, getDoc } from 'firebase/firestore/lite';
 import { onMounted, ref } from "vue";
 import router from "@/router";
 
-
 const playerName = ref(null);
 const townHallLevel = ref(null);
 const townHallWeaponLevel = ref(null);

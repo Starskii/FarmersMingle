@@ -3,6 +3,10 @@
     "firebase": "^10.6.0"
   },
   "dependencies": {
-    "add-dependencies": "^1.1.0"
+    "add-dependencies": "^1.1.0",
+    "apexcharts": "^3.44.0",
+    "bootstrap": "^5.3.2",
+    "vue-apexcharts": "^1.6.2",
+    "vue3-apexcharts": "^1.4.4"
   }
 }
