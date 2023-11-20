@@ -52,7 +52,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <VueApexCharts width='50%' type="bar" :options="options" :series="series"></VueApexCharts>
+    <VueApexCharts width='80%' type="bar" :options="options" :series="series"></VueApexCharts>
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
