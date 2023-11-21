@@ -58,11 +58,11 @@ onMounted(async () => {
 </script>
 
 <template>
+    <RouterLink to="/stats">Back</RouterLink>
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
         </template>
-        <RouterLink to="/stats">Back</RouterLink>
         <template #heading>Player: {{ playerName }}</template>
         <ul>
             <li> townHallLevel: {{ townHallLevel }}</li>
