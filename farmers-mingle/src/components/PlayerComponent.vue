@@ -30,7 +30,7 @@ xaxis: {
 const series = ref([{
 name: 'Donations',
 title: 'Donations',
-data: [1, 1]
+data: [0, 0]
 }]);
 
 onMounted(async () => {
