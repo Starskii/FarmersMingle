@@ -24,12 +24,13 @@ chart: {
     id: 'vuechart-example'
 },
 xaxis: {
-    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+    categories: ['Donated', 'Received']
 }
 });
 const series = ref([{
-name: 'series-1',
-data: [30, 40, 45, 50, 49, 60, 70, 91]
+name: 'Donations',
+title: 'Donations',
+data: [1, 1]
 }]);
 
 onMounted(async () => {
@@ -48,11 +49,13 @@ onMounted(async () => {
     donations.value = snapshot.data()?.donations;
     donationsReceived.value = snapshot.data()?.donationsReceived;
     clanCapitalContributions.value = snapshot.data()?.clanCapitalContributions;
+    series.value[0].data[0] = snapshot.data()?.donations;
+    series.value[0].data[1] = snapshot.data()?.donationsReceived;
+
 });
 </script>
 
 <template>
-    <VueApexCharts width='100%' type="bar" :options="options" :series="series"></VueApexCharts>
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
@@ -72,4 +75,6 @@ onMounted(async () => {
             <li> clanCapitalContributions: {{ clanCapitalContributions }}</li>
         </ul>
     </WelcomeItem>
+    <h2>Donations: </h2>
+    <VueApexCharts width='100%' type="bar" :options="options" :series="series"></VueApexCharts>
 </template>
