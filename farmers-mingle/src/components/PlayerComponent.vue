@@ -6,6 +6,8 @@ import { collection, doc, getDoc } from 'firebase/firestore/lite';
 import { onMounted, ref } from "vue";
 import router from "@/router";
 import VueApexCharts from "vue3-apexcharts";
+import { RouterLink } from 'vue-router';
+
 
 const playerName = ref(null);
 const townHallLevel = ref(null);
@@ -59,6 +61,7 @@ onMounted(async () => {
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
+            <RouterLink to="/stats">Back</RouterLink>
         </template>
         <template #heading>Player: {{ playerName }}</template>
         <ul>
