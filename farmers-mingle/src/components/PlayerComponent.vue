@@ -22,6 +22,11 @@ const donations = ref(null);
 const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
 const options = ref({
+    dataLabels: {
+  style: {
+    colors: ['#799163', ' #AB3131']
+  }
+},
     labels: ['Donated', 'Received']
   });
 const series = ref([0, 0]);
