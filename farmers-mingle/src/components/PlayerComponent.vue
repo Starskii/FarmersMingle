@@ -79,5 +79,5 @@ onMounted(async () => {
         </ul>
     </WelcomeItem>
     <h2>Donations: </h2>
-    <VueApexCharts width='100%' type="bar" :options="options" :series="series"></VueApexCharts>
+    <VueApexCharts width='100%' type="donut" :options="options" :series="series"></VueApexCharts>
 </template>
