@@ -61,8 +61,8 @@ onMounted(async () => {
     <WelcomeItem>
         <template #icon>
             <DocumentationIcon />
-            <RouterLink to="/stats">Back</RouterLink>
         </template>
+        <RouterLink to="/stats">Back</RouterLink>
         <template #heading>Player: {{ playerName }}</template>
         <ul>
             <li> townHallLevel: {{ townHallLevel }}</li>
