@@ -23,10 +23,10 @@ const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
 const options = ref({
     markers: {
-    colors: ['#799163', ' #AB3131']
-},
-    labels: ['Donated', 'Received']
-  });
+        colors: ["#3f8f29", "#bf1029"]
+    }, 
+    labels: ["Donated", "Received"]
+});
 const series = ref([0, 0]);
 
 onMounted(async () => {
