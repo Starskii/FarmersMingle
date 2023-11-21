@@ -22,18 +22,9 @@ const donations = ref(null);
 const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
 const options = ref({
-chart: {
-    id: 'vuechart-example'
-},
-xaxis: {
-    categories: ['Donated', 'Received']
-}
-});
-const series = ref([{
-name: 'Donations',
-title: 'Donations',
-data: [0, 0]
-}]);
+    labels: ['Donated', 'Received']
+  });
+const series = ref([0, 0]);
 
 onMounted(async () => {
     const playerId = router.currentRoute.value.path.split("/")[3].replace("%23", "#");
@@ -51,8 +42,8 @@ onMounted(async () => {
     donations.value = snapshot.data()?.donations;
     donationsReceived.value = snapshot.data()?.donationsReceived;
     clanCapitalContributions.value = snapshot.data()?.clanCapitalContributions;
-    series.value[0].data[0] = snapshot.data()?.donations;
-    series.value[0].data[1] = snapshot.data()?.donationsReceived;
+    series.value[0] = snapshot.data()?.donations;
+    series.value[1] = snapshot.data()?.donationsReceived;
 
 });
 </script>
