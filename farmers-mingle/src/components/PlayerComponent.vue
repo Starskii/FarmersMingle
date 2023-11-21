@@ -22,7 +22,7 @@ const donations = ref(null);
 const donationsReceived = ref(null);
 const clanCapitalContributions = ref(null);
 const options = ref({
-    markers: {
+    fill: {
         colors: ["#3f8f29", "#bf1029"]
     }, 
     labels: ["Donated", "Received"]
